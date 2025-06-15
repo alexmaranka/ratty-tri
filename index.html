@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GPA Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>GPA Calculator</h1>
+    <form id="gpa-form">
+        <table id="courses-table">
+            <tr>
+                <th>Course</th>
+                <th>Credits</th>
+                <th>Grade</th>
+                <th></th>
+            </tr>
+            <tr>
+                <td><input type="text" name="course[]" required></td>
+                <td><input type="number" name="credits[]" min="0" step="0.5" required></td>
+                <td>
+                    <select name="grade[]" required>
+                        <option value="4">A</option>
+                        <option value="3.7">A-</option>
+                        <option value="3.3">B+</option>
+                        <option value="3">B</option>
+                        <option value="2.7">B-</option>
+                        <option value="2.3">C+</option>
+                        <option value="2">C</option>
+                        <option value="1.7">C-</option>
+                        <option value="1">D</option>
+                        <option value="0">F</option>
+                    </select>
+                </td>
+                <td><button type="button" class="remove-course">Remove</button></td>
+            </tr>
+        </table>
+        <button type="button" id="add-course">Add Course</button>
+        <button type="submit">Calculate GPA</button>
+    </form>
+    <h2 id="gpa-result"></h2>
+    <script src="script.js"></script>
+</body>
+</html>
